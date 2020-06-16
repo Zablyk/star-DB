@@ -4,12 +4,7 @@ const getResource = async (url) => {
   return body;
 };
 
-
-
-fetch('https://swapi.dev/api/people/1/')
-  .then((res) => {
-    return res.json();
-  })
+getResource('https://swapi.dev/api/people/1/')
   .then((body) => {
-    console.log('Now lady and gentelman', body);
+    console.log(body);
   });
