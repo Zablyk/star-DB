@@ -9,13 +9,17 @@ import StarshipSetails from '../starship-details/starship-detail';
 
 import './app.css';
 
-export default const App = () => {
+const App = () => {
  return (
-    <Header />
-    <ItemList />
-    <PersonDetails />
-    <PlanetDetails />
-    <RandomPlanet />
-    <StarshipSetails />
+     <div>
+        <Header />
+        <ItemList />
+        <PersonDetails />
+        <PlanetDetails />
+        <RandomPlanet />
+        <StarshipSetails />
+    </div>
  );
 };
+
+export default App;
