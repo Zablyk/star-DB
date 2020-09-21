@@ -15,6 +15,12 @@ export default class PersonDetails extends Component {
     this.updatePerson();
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.personId !== prevProps.personId) {
+      this.updatePerson();
+    }
+  }
+
   updatePerson() {
     const {
       personId
@@ -51,7 +57,11 @@ export default class PersonDetails extends Component {
               alt="loading person"/>
 
         <div className="card-body">
-          <h4>{name}</h4>
+          < h4 > {
+            name
+          } {
+            this.props.personId
+          } < /h4>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
               <span className="term">Gender</span>
